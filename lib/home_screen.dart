@@ -19,20 +19,20 @@ class _HomeScreenState extends State<HomeScreen> {
     final picked = await ImagePicker().pickImage(source: ImageSource.gallery);
     if (picked != null) {
       setState(() => image = File(picked.path));
-      final prediction = await TFLiteService.predictDisease(image!);
-      setState(() => result = prediction);
+    //  final prediction = await TFLiteService.predictDisease(image!);
+     // setState(() => result = prediction);
     }
   }
 
   @override
   void initState() {
     super.initState();
-    TFLiteService.loadModel();
+   // TFLiteService.loadModel();
   }
 
   @override
   void dispose() {
-    TFLiteService.disposeModel();
+   // TFLiteService.disposeModel();
     super.dispose();
   }
 
