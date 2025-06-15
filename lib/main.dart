@@ -10,6 +10,7 @@ class TobaccoApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("Main Screen ");
     return MaterialApp(
       title: 'Tobacco Disease Detector',
       theme: ThemeData(
